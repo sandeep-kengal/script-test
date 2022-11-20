@@ -3,7 +3,7 @@ pipeline {
        stages { 
          stage ('build') {
             steps {
-               sh ''' free -h ''''
+               sh '''free -h''''
                }
               }
              }
