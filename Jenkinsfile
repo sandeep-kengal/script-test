@@ -1,7 +1,7 @@
 pipeline {
       agent { label 'built-in' }
       environment {
-      Name=Sandeep
+      Name="Sandeep"
       }
          stages { options {
          stage ('build') {
