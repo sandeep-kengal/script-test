@@ -1,9 +1,11 @@
 pipeline {
       agent { label 'built-in' }
-       stages { 
+      Name=Sandeep
+         stages { options {
          stage ('build') {
             steps {
-               sh '''free -h'''
+               sh ''' free -h
+                     echo "$Name" '''
                }
               }
              }
