@@ -5,18 +5,22 @@ pipeline {
       Tool="jenkins"      
       }
          stages { 
-               parallel {
+               
          stage ('build') {
+                 parallel {
             steps {
                sh ''' free -h
                      echo "$Name" ''' 
                }
          }
+         }
                stage ('test') {
+                     parallel {
                      steps {
                           sh ''' echo "tool is $Tool" ''' 
                      }
                } 
+               }
         }
    } 
 }  
