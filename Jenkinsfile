@@ -1,25 +1,27 @@
 pipeline {
-      agent { label 'built-in' }
-      environment {
-      Name="Sandeep"
-      Tool="jenkins"      
-      }
-         stages { 
-               
-         stage ('build') {
-                 parallel {
+    agent any
+
+     environement {
+       Name="Sandeep"
+       Tool="Jenkins"
+    }
+stages {
+    stage ('deploy')
+     parallel {
+        stage ('SERVER1'){
             steps {
-               sh ''' free -h
-                     echo "$Name" ''' 
-               }
-         }
-         }
-               stage ('test') {
-                     parallel {
-                     steps {
-                          sh ''' echo "tool is $Tool" ''' 
-                     }
-               } 
-               }
+                sh ''' echo "$Name" '''
+
+            }
         }
-   }  
+         stage ('SERVER2') {
+
+          
+          steps {
+            sh ''' echo "$Tool" '''
+          }
+     }
+     }
+}
+
+}
