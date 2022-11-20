@@ -16,7 +16,7 @@ pipeline {
                      steps {
                           sh ''' echo "tool is $Tool" ''' 
                      }
-               
+               } 
              }
             } 
 }  
