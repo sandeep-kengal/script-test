@@ -3,13 +3,12 @@ pipeline {
       environment {
       Name="Sandeep"
       }
-         stages { options {
+         stages { 
          stage ('build') {
             steps {
                sh ''' free -h
                      echo "$Name" ''' }
                }
-              }
              }
             } 
                
