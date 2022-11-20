@@ -1,12 +1,12 @@
 pipeline {
     agent any
 
-     environement {
+     environment {
        Name="Sandeep"
        Tool="Jenkins"
     }
 stages {
-    stage ('deploy')
+    stage ('deploy'){
      parallel {
         stage ('SERVER1'){
             steps {
@@ -24,4 +24,5 @@ stages {
      }
 }
 
+}
 }
