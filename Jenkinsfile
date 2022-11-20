@@ -9,14 +9,14 @@ pipeline {
          stage ('build') {
             steps {
                sh ''' free -h
-                     echo "$Name" ''' }
+                     echo "$Name" ''' 
                }
-              
+         }
                stage ('test') {
                      steps {
                           sh ''' echo "tool is $Tool" ''' 
                      }
                } 
-             }
-            } 
+        }
+   } 
 }  
