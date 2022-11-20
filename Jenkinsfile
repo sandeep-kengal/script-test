@@ -5,7 +5,7 @@ pipeline {
          stage ('build') {
             steps {
                sh ''' free -h
-                     echo "$Name" '''
+                     echo "$Name" ''' }
                }
               }
              }
